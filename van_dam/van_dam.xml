@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>van_dam</Name>
+  <Repository>ghcr.io/floppy/van_dam:latest</Repository>
+  <Registry/>
+  <Network/>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Floppy/van_dam/issues</Support>
+  <Project>https://github.com/Floppy/van_dam</Project>
+  <Overview>VanDAM is a Digital Asset Manager (DAM), specifically designed for 3D print files. Create a library pointing at your files on disk, and it will scan for models and parts. It assumes that any folders containing STL or OBJ files are models, and the files within them are parts. You can then view the files easily through your browser!&#xD;
+&#xD;
+https://github.com/Floppy/van_dam</Overview>
+  <Category>Tools: Other: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:3214]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/MountainGod2/unraid-templates/main/van_dam/van_dam.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1680219205</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Requires PostgreSQL and Redis database to operate. &#xD;
+&#xD;
+This template is a reconstruction of the example docker-compose file found in the source reposity here: &#xD;
+https://github.com/Floppy/van_dam/blob/main/docker-compose.example.yml&#xD;
+&#xD;
+All default values assume that:&#xD;
+1) all three containers running on the same user-defined bridge network&#xD;
+2) they have been named as per the example docker-compose file (db/redis)&#xD;
+3) postgres has a user named van_dam, and the password matches the value&#xD;
+in DATABASE_URL</Requires>
+  <Config Name="Web UI Port" Target="3214" Default="3214" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3214</Config>
+  <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="postgresql://van_dam:password@db/van_dam?pool=5" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="a_nice_long_random_string" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="REDIS_URL" Target="REDIS_URL" Default="redis://redis:6379/1" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Libraries" Target="/libraries" Default="" Mode="rw" Description="Location of 3D assets" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
