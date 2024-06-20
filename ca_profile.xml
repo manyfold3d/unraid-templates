@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://manyfold.app/images/logo.png</Icon>
+  <Profile>
+  	Building a self-hosted 3d model organisation app for 3d printing enthusiasts
+  </Profile>
+  <DonateLink>https://opencollective.com/manyfold</DonateLink>
+  <DonateText>Help us make Manyfold even better!</DonateText>
+  <WebPage>https://manyfold.app</WebPage>
+</Maintainer>
