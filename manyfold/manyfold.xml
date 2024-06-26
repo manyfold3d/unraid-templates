@@ -33,7 +33,10 @@ All default values assume that:&#xD;
 3) postgres has a user named manyfold, and the password matches the value&#xD;
 in DATABASE_URL</Requires>
   <Config Name="Web UI Port" Target="3214" Default="3214" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">3214</Config>
-  <Config Name="DATABASE_URL" Target="DATABASE_URL" Default="postgresql://manyfold:password@db/manyfold?pool=5" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DATABASE_HOST" Target="DATABASE_HOST" Default="db" Mode="" Description="The hostname of your PostgreSQL server" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DATABASE_USER" Target="DATABASE_USER" Default="manyfold" Mode="" Description="A valid username for your database server" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DATABASE_PASSWORD" Target="DATABASE_PASSWORD" Default="password" Mode="" Description="The password for your database server" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="DATABASE_NAME" Target="DATABASE_NAME" Default="manyfold" Mode="" Description="The name of the database on your PostgresSQL server" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="a_nice_long_random_string" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="REDIS_URL" Target="REDIS_URL" Default="redis://redis:6379/1" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Libraries" Target="/libraries" Default="" Mode="rw" Description="Location of 3D assets" Type="Path" Display="always" Required="true" Mask="false"/>
