@@ -13,7 +13,7 @@
 &#xD;
 https://github.com/manyfold3d/manyfold</Overview>
   <Category>Tools: Other: Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:3214]</WebUI>
+  <WebUI>http://[IP]:[PORT:3214]/</WebUI>
   <TemplateURL/>
   <Icon>https://manyfold.app/images/logo.png</Icon>
   <ExtraParams/>
