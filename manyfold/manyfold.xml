@@ -39,5 +39,7 @@ in DATABASE_URL</Requires>
   <Config Name="DATABASE_NAME" Target="DATABASE_NAME" Default="manyfold" Mode="" Description="The name of the database on your PostgresSQL server" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="a_nice_long_random_string" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="REDIS_URL" Target="REDIS_URL" Default="redis://redis:6379/1" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="The user ID that Manyfold should run as" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="The group ID that Manyfold should run as" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Libraries" Target="/libraries" Default="" Mode="rw" Description="Location of 3D assets" Type="Path" Display="always" Required="true" Mask="false"/>
 </Container>
