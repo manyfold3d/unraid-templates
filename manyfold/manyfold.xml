@@ -3,7 +3,7 @@
   <Name>Manyfold</Name>
   <Repository>ghcr.io/manyfold3d/manyfold:latest</Repository>
   <Registry/>
-  <Network/>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
