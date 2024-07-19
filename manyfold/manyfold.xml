@@ -15,7 +15,7 @@ https://github.com/manyfold3d/manyfold</Overview>
   <Category>Tools: Other: Status:Beta</Category>
   <WebUI>http://[IP]:[PORT:3214]/</WebUI>
   <TemplateURL/>
-  <Icon>https://manyfold.app/images/logo.png</Icon>
+  <Icon>https://manyfold.app/images/roundel.svg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
