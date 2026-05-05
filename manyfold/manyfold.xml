@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Manyfold (official, standalone)</Name>
+  <Version>v0.138.0</Version>
   <Repository>ghcr.io/manyfold3d/manyfold-solo:latest</Repository>
   <Registry>https://github.com/manyfold3d/manyfold/pkgs/container/manyfold-solo</Registry>
   <Network>bridge</Network>
@@ -22,12 +23,91 @@
   <Changes>
 ### v0.138.0 (2026-04-22)
 This release focuses on federation of some social features. We've improved how new model posts appear on other services like Mastodon, and you can now quote those messages as well! We also count up likes from other servers for the original model, letting you know just how popular your work is!
-
+  
 ### v0.137.0 (2026-04-13)
 Following on from last release, Manyfold now has support for comment federation! If you reply to a post made by Manyfold on (for instance) Mastodon, it will get pulled back into the model page and displayed as a comment! This should open up a new world of simple feedback for your models, and there's still more to come!
-
+  
 ### v0.136.0 (2026-03-25)
 It's time to start a conversation! Each model now has a comment thread where users can share their thoughts and experiences! Comments are local-only for now, but never fear, federation will be coming soon...
+  
+### v0.135.0 (2026-03-17)
+This release sees some improvements to the path template, which lets you maps your folders on disk to models in Manyfold however you want. We're hoping these changes make setup easier for people with existing collections!
+  
+### v0.134.0 (2026-03-09)
+This release adds a whole new feature - lists! Logged-in users can now create private lists of models, maybe to "print later", track "already printed", or otherwise collect in whatever way they like. Lists are distinct from collections, which are shared; these are just *yours* (though we might add sharing in future). 
+  
+### v0.133.1 (2026-02-26)
+A quick bugfix release for some UI and CORS issues, and a moderate level security fix.
+  
+### v0.133.0 (2026-02-25)
+This is a big one! At long last, Manyfold can now create static image previews of your 3D models thanks to our new friends at [F3D](https://f3d.app), so you can see exactly what you've got without having to load the whole model - but of course, you can still click to load the real thing.
+  
+### v0.132.1 (2026-02-09)
+This is a bugfix release, with a fixes for a few high-profile bugs in signup, dropdowns, and preview settings. There are also some performance improvements, particularly around the download size of client-side Javascript code.
+  
+### v0.132.0 (2026-01-29)
+In the last release, we added "user groups" for creators, letting you more easily manage large groups of users who you want to give permissions on models. This was aimed at supporting creators like the many on Patreon who create models for their subscribers. This release adds the remaining features to support that process.
+  
+### v0.131.0 (2026-01-09)
+This release adds the first part of a new feature to help out commercial creators; you can now manage "user groups" per creator, which lets you make a list of users and then share permissions on models with them. And as a bonus, we've added support and rendering for Rhino 3DM files.
+  
+### v0.130.4 (2026-01-06)
+Bugfixing the previous bugfix! Starting 2026 as I mean to go on... 😄 
+  
+### v0.130.3 (2026-01-05)
+A couple of small bugfixes to start off the new year!
+  
+### v0.130.2 (2025-12-22)
+A fix for a very long-standing database connection problem that's been very difficult to find!
+  
+### v0.130.1 (2025-12-19)
+Quick bugfix for user settings on federated instances that crept into the last release.
+  
+### v0.130.0 (2025-12-19)
+The last few weeks have been quiet, focused on background work for an upcoming new feature. That's not quite ready yet, but here's a Christmas release for you, with a grab bag of small features, bugfixes, design tweaks, and performance improvements. Happy holidays! 🎄
+  
+### v0.129.4 (2025-11-28)
+Urgent bugfix for OIDC login bug introduced in v0.129.3.
+  
+### v0.129.3 (2025-11-27)
+Another patch release, this time focused on security improvements from our recent audit. There are also a few bugfixes, including an important one from the last release that potentially breaks model pages for new users!
+  
+### v0.129.2 (2025-11-19)
+This week's release is focused on accessibility bugfixes and improvements. There's also a performance improvement bugfix that should reduce browser memory usage on pages with large numbers of 3D model renderers, _and_ you should now get proper filenames when you open a file in your slicer apps.
+  
+### v0.129.1 (2025-11-11)
+Just a little bugfix release for a few annoying errors!
+  
+### v0.129.0 (2025-11-06)
+Two Manyfold releases in a week? What a time to be alive! This one comes with another pile of interface improvements and little quality-of-life features. There's a new tidier account menu with "my stuff" links, better onboarding, confirmations for expensive operations, the ability to sort by updated date, and your selected sort will now persist across sessions!
+  
+### v0.128.1 (2025-11-04)
+Some high-priority bugfixes for the last release, mostly around the upload form.
+  
+### v0.128.0 (2025-11-03)
+This week sees improvements to design and UX, and a new onboarding experience! The first time you use the site, you'll get a short tour that explains a few basic concepts. Apologies if you're an old hand already!
+  
+### v0.127.0.0.1 (aka v0.127.1) (2025-10-28)
+Please forgive us for breaking proper semantic versioning for this one release in order to get a self-hosting joke in. Priorities!
+  
+### v0.127.0 (2025-10-27)
+Big news, with long-awaited improvements to uploading in this release. The upload form will now create a single model with all files if you're not just uploading archives (zipfiles), and it will confirm to you beforehand what will be created. You can set the model name at upload time, as well as the permissions using our new preset options introduced in the last release. If you upload archives only, it will still extract each one and create separate models. Hopefully this is the "least surprising" behaviour and we'd love to hear how you get on with it.
+  
+### v0.126.0 (2025-10-16)
+This time round, we've got a new permission option during upload, so you can easily make models public straight away, and there's a default site-wide setting for that option so you can make it extra easy for users!
+  
+### v0.125.0 (2025-10-06)
+A mixture of small features and bugfixes this time round; support for opening in Lychee, searchable dropdowns, matching fixes and URL import help.
+  
+### v0.124.0 (2025-09-26)
+Added avatar and background images for creators, including syncing them from external sites, so now you can make your creator profile beautiful!
+  
+### v0.123.2 (2025-09-22)
+Minor release for a few bugfixes, including a small security fix around Cults3D credentials and fixes for running on MySQL/MariaDB.
+  
+### v0.123.1 (2025-09-17)
+Minor bugfixes and post-release tweaks for cross-instance search.
+  
   </Changes>
   <DonateText>Donations</DonateText>
   <DonateLink>https://opencollective.com/manyfold</DonateLink>
