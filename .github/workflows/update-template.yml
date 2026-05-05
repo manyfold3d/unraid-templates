@@ -1,0 +1,28 @@
+name: Update Template
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+      - name: Run rake task
+        run: rake
+        env:
+          GITHUB_ACCESS_TOKEN: "${{ secrets.UNRAID_TEMPLATE_PAT }}"
+      - name: Open pull request with changes
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: "${{ secrets.UNRAID_TEMPLATE_PAT }}"
+          commit-message: "Update unraid template for latest release"
+          branch: "update-release-info"
+          labels: improvement
+          title: "Updated unraid template for latest release"
+          delete-branch: true
+          add-paths: manyfold/manyfold.xml
