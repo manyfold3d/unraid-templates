@@ -1,25 +1,36 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Manyfold</Name>
+  <Name>Manyfold (official, standalone)</Name>
   <Repository>ghcr.io/manyfold3d/manyfold-solo:latest</Repository>
   <Registry>https://github.com/manyfold3d/manyfold/pkgs/container/manyfold-solo</Registry>
   <Network>bridge</Network>
   <MyIP />
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/manyfold3d/manyfold/issues</Support>
-  <Project>https://github.com/manyfold3d/manyfold</Project>
-  <Overview>Manyfold is a Digital Asset Manager (DAM), specifically designed for 3D print files. Create a library pointing at your files on disk, and it will scan for models and parts. It assumes that any folders containing STL or OBJ files are models, and the files within them are parts. You can then view the files easily through your browser!&#xD;
-    This template does not require PostgreSQL or Redis to operate, as it uses a built-in sqlite database.
+  <Support>https://manyfold.app/about/contact.html</Support>
+  <Project>https://manyfold.app/</Project>
+  <Overview>Manyfold is an open source, self-hosted web application for managing, sharing, and publishing your 3d models, particularly focused on 3d printing.&#xD;
+  This template uses our "solo" build, which does not require any other services to operate as it uses a built-in sqlite database written to `/config`.
   </Overview>
-  <Category>Tools: Other: Status:Beta</Category>
+  <Category>MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:3214]/</WebUI>
   <TemplateURL />
   <Icon>https://manyfold.app/images/roundel.svg</Icon>
   <ExtraParams />
   <PostArgs />
-  <DonateText />
-  <DonateLink />
+  <Date>2026-04-22</Date>
+  <Changes>
+### v0.138.0 (2026-04-22)
+This release focuses on federation of some social features. We've improved how new model posts appear on other services like Mastodon, and you can now quote those messages as well! We also count up likes from other servers for the original model, letting you know just how popular your work is!
+
+### v0.137.0 (2026-04-13)
+Following on from last release, Manyfold now has support for comment federation! If you reply to a post made by Manyfold on (for instance) Mastodon, it will get pulled back into the model page and displayed as a comment! This should open up a new world of simple feedback for your models, and there's still more to come!
+
+### v0.136.0 (2026-03-25)
+It's time to start a conversation! Each model now has a comment thread where users can share their thoughts and experiences! Comments are local-only for now, but never fear, federation will be coming soon...
+  </Changes>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://opencollective.com/manyfold</DonateLink>
   <Config Name="Web UI Port" Target="3214" Default="3214" Mode="tcp" Description="Container Port: 3214" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="SECRET_KEY_BASE" Target="SECRET_KEY_BASE" Default="a_nice_long_random_string" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="The user ID that Manyfold should run as" Type="Variable" Display="advanced" Required="false" Mask="false"/>
