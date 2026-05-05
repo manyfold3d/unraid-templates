@@ -15,7 +15,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Run rake task
-        run: rake
+        run: bundle exec rake
         env:
           GITHUB_ACCESS_TOKEN: "${{ secrets.UNRAID_TEMPLATE_PAT }}"
       - name: Open pull request with changes
