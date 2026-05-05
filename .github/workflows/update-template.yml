@@ -17,7 +17,7 @@ jobs:
       - name: Run rake task
         run: bundle exec rake
         env:
-          GITHUB_ACCESS_TOKEN: "${{ secrets.UNRAID_TEMPLATE_PAT }}"
+          UNRAID_TEMPLATE_PAT: "${{ secrets.UNRAID_TEMPLATE_PAT }}"
       - name: Open pull request with changes
         uses: peter-evans/create-pull-request@v8
         with:
