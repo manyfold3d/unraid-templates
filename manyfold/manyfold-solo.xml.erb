@@ -23,7 +23,7 @@
   <Changes><% @releases.each do |release| %>
 ### <%= release.name %> (<%= release.published_at.to_date %>)
 <%= release.body.split("\n").first %>
-  <% end %>
+<% end %>
   </Changes>
   <DonateText>Donations</DonateText>
   <DonateLink>https://opencollective.com/manyfold</DonateLink>
