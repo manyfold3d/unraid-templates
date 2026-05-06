@@ -15,4 +15,5 @@ task :default do
     template = ERB.new(File.read("#{target}.erb"))
     output = template.result(Kernel.binding)
     File.write(target, output)
+  end
 end
