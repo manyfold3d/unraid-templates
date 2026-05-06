@@ -27,4 +27,4 @@ jobs:
           labels: improvement
           title: "Updated unraid template for latest release"
           delete-branch: true
-          add-paths: manyfold/manyfold.xml
+          add-paths: manyfold/*.xml
