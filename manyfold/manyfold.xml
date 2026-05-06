@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Manyfold (official, standalone)</Name>
-  <Version>v0.138.0</Version>
+  <Version>v0.139.0</Version>
   <Repository>ghcr.io/manyfold3d/manyfold-solo:latest</Repository>
   <Registry>https://github.com/manyfold3d/manyfold/pkgs/container/manyfold-solo</Registry>
   <Network>bridge</Network>
@@ -19,8 +19,11 @@
   <Icon>https://manyfold.app/images/roundel.svg</Icon>
   <ExtraParams />
   <PostArgs />
-  <Date>2026-04-22</Date>
+  <Date>2026-05-06</Date>
   <Changes>
+### v0.139.0 (2026-05-06)
+Back onto organisation tools for this release, with some long-requested additions. Collections can now have a cover image, or alternatively you can manually set the preview model used! You can also now add models to more than one collection, and have multiple collections in path templates.
+  
 ### v0.138.0 (2026-04-22)
 This release focuses on federation of some social features. We've improved how new model posts appear on other services like Mastodon, and you can now quote those messages as well! We also count up likes from other servers for the original model, letting you know just how popular your work is!
   
