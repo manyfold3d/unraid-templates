@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Manyfold (official, standalone)</Name>
-  <Version>v0.138.0</Version>
+  <Version>v0.139.0</Version>
   <Repository>manyfold3d/manyfold-solo:latest</Repository>
   <Registry>https://hub.docker.com/repository/docker/manyfold3d/manyfold-solo</Registry>
   <Network>bridge</Network>
@@ -19,8 +19,11 @@
   <Icon>https://manyfold.app/images/roundel.svg</Icon>
   <ExtraParams />
   <PostArgs />
-  <Date>2026-04-22</Date>
+  <Date>2026-05-06</Date>
   <Changes>
+### v0.139.0 (2026-05-06)
+Back onto organisation tools for this release, with some long-requested additions. Collections can now have a cover image, or alternatively you can manually set the preview model used! You can also now add models to more than one collection, and have multiple collections in path templates.
+
 ### v0.138.0 (2026-04-22)
 This release focuses on federation of some social features. We've improved how new model posts appear on other services like Mastodon, and you can now quote those messages as well! We also count up likes from other servers for the original model, letting you know just how popular your work is!
 
@@ -34,7 +37,7 @@ It's time to start a conversation! Each model now has a comment thread where use
 This release sees some improvements to the path template, which lets you maps your folders on disk to models in Manyfold however you want. We're hoping these changes make setup easier for people with existing collections!
 
 ### v0.134.0 (2026-03-09)
-This release adds a whole new feature - lists! Logged-in users can now create private lists of models, maybe to "print later", track "already printed", or otherwise collect in whatever way they like. Lists are distinct from collections, which are shared; these are just *yours* (though we might add sharing in future).
+This release adds a whole new feature - lists! Logged-in users can now create private lists of models, maybe to "print later", track "already printed", or otherwise collect in whatever way they like. Lists are distinct from collections, which are shared; these are just *yours* (though we might add sharing in future). 
 
 ### v0.133.1 (2026-02-26)
 A quick bugfix release for some UI and CORS issues, and a moderate level security fix.
@@ -52,7 +55,7 @@ In the last release, we added "user groups" for creators, letting you more easil
 This release adds the first part of a new feature to help out commercial creators; you can now manage "user groups" per creator, which lets you make a list of users and then share permissions on models with them. And as a bonus, we've added support and rendering for Rhino 3DM files.
 
 ### v0.130.4 (2026-01-06)
-Bugfixing the previous bugfix! Starting 2026 as I mean to go on... 😄
+Bugfixing the previous bugfix! Starting 2026 as I mean to go on... 😄 
 
 ### v0.130.3 (2026-01-05)
 A couple of small bugfixes to start off the new year!
