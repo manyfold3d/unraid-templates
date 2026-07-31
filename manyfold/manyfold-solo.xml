@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Manyfold (official, standalone)</Name>
-  <Version>v0.140.1</Version>
+  <Version>v0.147.1</Version>
   <Repository>manyfold3d/manyfold-solo:latest</Repository>
   <Registry>https://hub.docker.com/repository/docker/manyfold3d/manyfold-solo</Registry>
   <Network>bridge</Network>
@@ -19,8 +19,44 @@
   <Icon>https://manyfold.app/images/roundel.svg</Icon>
   <ExtraParams />
   <PostArgs />
-  <Date>2026-05-14</Date>
+  <Date>2026-07-30</Date>
   <Changes>
+### v0.147.1 (2026-07-30)
+Security release, with a fix for Rails CVE-2026-66066.
+
+### v0.147.0 (2026-07-29)
+It's been a while! Partly that's due to life beyond code, but also it's because we've focused this release on making some big improvements to uploading, performance and bugfixing.
+
+### v0.146.0 (2026-07-02)
+This is the sort of release that's huge and tiny at the same time: we've added a plugin system! Plugins are optional components that you can add to your Manyfold instance that can add extra UI, file types, APIs, all sorts of things. This means that (a) we can add more optional features without bloating the core too much and (b) it should be *much* easier for other people to write code that slots into Manyfold.
+
+### v0.145.1 (2026-06-23)
+Quick bugfix release for an S3 storage scanning problem.
+
+### v0.145.0 (2026-06-23)
+It's printing time! Now you can print pre-sliced files straight from Manyfold (given the right file and printer!). Configure your local printer connection in settings, and then you can send GCODE or SL1 files straight from the file menu! Admins automatically have print permissions, but you can assign the 'printer' role to other accounts as well, if you're feeling brave!
+
+### v0.144.1 (2026-06-16)
+A small bugfix for an error when using custom lists.
+
+### v0.144.0 (2026-06-16)
+Been doing some digital kitbashing and lost track of which models are based on which? Now you can mark a model as a "remix" of other models, as many as you like! Just go to the edit page, add a relationship, and search for the model you want to link up. Remixes and sources are shown in the model page sidebar.
+
+### v0.143.2 (2026-06-11)
+A small bugfix for a couple of visual problems.
+
+### v0.143.1 (2026-06-11)
+Bug fixes, and a fix for a fairly major performance problem when loading model pages with lots of files. Also, this version now uses the Redis store for caching, which should improve general site performance.
+
+### v0.143.0 (2026-06-02)
+This release adds "alternative format" links between files. Now, when you convert a file to another format, they'll be automatically linked together, in the same way as supported files. 
+
+### v0.142.0 (2026-05-26)
+This release allows the use of videos in preview frames, so you can show off your models in a more dynamic fashion, and also adds indexer support for the upcoming DragonFruit resin slicer VOXL file format.
+
+### v0.141.0 (2026-05-19)
+This release adds a couple of new features, and a few bugfixes, as well as some internal refactoring and improved tests. You can now set a preferred "landing page", like "my models" or "all creators", as well as the current "dashboard" - and that can be site-wide, or per-user. And, due to some of that internal refactoring, we now have syntax highlighting for some text files (e.g. Javascript).
+
 ### v0.140.1 (2026-05-14)
 A small bugfix release for a couple of errors recently introduced in the metadata parsing.
 
@@ -74,39 +110,6 @@ Bugfixing the previous bugfix! Starting 2026 as I mean to go on... 😄
 
 ### v0.130.3 (2026-01-05)
 A couple of small bugfixes to start off the new year!
-
-### v0.130.2 (2025-12-22)
-A fix for a very long-standing database connection problem that's been very difficult to find!
-
-### v0.130.1 (2025-12-19)
-Quick bugfix for user settings on federated instances that crept into the last release.
-
-### v0.130.0 (2025-12-19)
-The last few weeks have been quiet, focused on background work for an upcoming new feature. That's not quite ready yet, but here's a Christmas release for you, with a grab bag of small features, bugfixes, design tweaks, and performance improvements. Happy holidays! 🎄
-
-### v0.129.4 (2025-11-28)
-Urgent bugfix for OIDC login bug introduced in v0.129.3.
-
-### v0.129.3 (2025-11-27)
-Another patch release, this time focused on security improvements from our recent audit. There are also a few bugfixes, including an important one from the last release that potentially breaks model pages for new users!
-
-### v0.129.2 (2025-11-19)
-This week's release is focused on accessibility bugfixes and improvements. There's also a performance improvement bugfix that should reduce browser memory usage on pages with large numbers of 3D model renderers, _and_ you should now get proper filenames when you open a file in your slicer apps.
-
-### v0.129.1 (2025-11-11)
-Just a little bugfix release for a few annoying errors!
-
-### v0.129.0 (2025-11-06)
-Two Manyfold releases in a week? What a time to be alive! This one comes with another pile of interface improvements and little quality-of-life features. There's a new tidier account menu with "my stuff" links, better onboarding, confirmations for expensive operations, the ability to sort by updated date, and your selected sort will now persist across sessions!
-
-### v0.128.1 (2025-11-04)
-Some high-priority bugfixes for the last release, mostly around the upload form.
-
-### v0.128.0 (2025-11-03)
-This week sees improvements to design and UX, and a new onboarding experience! The first time you use the site, you'll get a short tour that explains a few basic concepts. Apologies if you're an old hand already!
-
-### v0.127.0.0.1 (aka v0.127.1) (2025-10-28)
-Please forgive us for breaking proper semantic versioning for this one release in order to get a self-hosting joke in. Priorities!
 
   </Changes>
   <DonateText>Donations</DonateText>
