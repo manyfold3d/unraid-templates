@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Manyfold (official, standalone)</Name>
-  <Version>v0.151.0</Version>
+  <Version>v0.153.0</Version>
   <Repository>manyfold3d/manyfold-solo:latest</Repository>
   <Registry>https://hub.docker.com/repository/docker/manyfold3d/manyfold-solo</Registry>
   <Network>bridge</Network>
@@ -19,8 +19,14 @@
   <Icon>https://manyfold.app/images/roundel.svg</Icon>
   <ExtraParams />
   <PostArgs />
-  <Date>2026-10-12</Date>
+  <Date>2026-10-21</Date>
   <Changes>
+### v0.153.0 (2026-10-21)
+This release is mainly to update CA certificates due to the [eMudhra certificate compromise](https://emudhra.we-have-a-problem.com), but also comes with adjustable resolution for the model thumbnail renderer.
+
+### v0.152.0 (2026-10-19)
+This release adds the first step towards some exciting new features, with file editing. To start with it's just simple plaintext files, but this puts in place the framework for much richer editing capabilities one day!
+
 ### v0.151.0 (2026-10-12)
 This release adds a whole new interactive renderer! For a while we've been using [F3D](https://f3d.app) to create model thumbnails, but now we've added the full renderer as a mesh viewer. That means we've got full view support for a load of new files, most notably STEP! 
 
@@ -104,12 +110,6 @@ This release sees some improvements to the path template, which lets you maps yo
 
 ### v0.134.0 (2026-03-09)
 This release adds a whole new feature - lists! Logged-in users can now create private lists of models, maybe to "print later", track "already printed", or otherwise collect in whatever way they like. Lists are distinct from collections, which are shared; these are just *yours* (though we might add sharing in future). 
-
-### v0.133.1 (2026-02-26)
-A quick bugfix release for some UI and CORS issues, and a moderate level security fix.
-
-### v0.133.0 (2026-02-25)
-This is a big one! At long last, Manyfold can now create static image previews of your 3D models thanks to our new friends at [F3D](https://f3d.app), so you can see exactly what you've got without having to load the whole model - but of course, you can still click to load the real thing.
 
   </Changes>
   <DonateText>Donations</DonateText>
